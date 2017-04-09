@@ -1,21 +1,59 @@
 package main
 
 import (
-	"log"
+	"fmt"
+	"time"
+
+	"github.com/gin-gonic/gin"
+	"github.com/jinzhu/gorm"
+	_ "github.com/jinzhu/gorm/dialects/sqlite"
 )
 
+var db *gorm.DB
+var err error
+
+//Holiday описываем структура праздника
+type Holiday struct {
+	Date time.Time `json:"date"`
+	Name string    `json:"name"`
+	Description string `json:"description"`
+}
+
 func main() {
-	// create a new server
-	s, err := server.New()
+	db, err = gorm.Open("sqlite3", "./holidays.db")
+
 	if err != nil {
-		// creation failed, print error and exit
-		log.Println("Error creating server:", err)
-		return
+		fmt.Println("DB ERROR", err)
+	}
+	defer db.Close()
+
+	//db.AutoMigrate(&Holiday{})
+
+	r := gin.Default()
+	r.GET("/holidays/", GetHolidays)
+	r.GET("/holidays/:date", GetHoliday)
+
+	r.Run(":8080")
+}
+
+func GetHoliday(c *gin.Context) {
+	date := c.Params.ByName("date")
+	var holiday Holiday
+	if err := db.Where("date = ?", date).First(&holiday).Error; err != nil {
+		c.AbortWithStatus(404)
+		fmt.Println(err)
+	} else {
+		c.JSON(200, holiday)
+	}
+}
+
+func GetHolidays(c *gin.Context) {
+	var holiday []Holiday
+	if err := db.Find(&holiday).Error; err != nil {
+		c.AbortWithStatus(404)
+		fmt.Println(err)
+	} else {
+		c.JSON(200, holiday)
 	}
 
-	err = s.Run() // run the server
-	if err != nil {
-		// running returned error
-		log.Println("Server stopped with error:", err)
-	}
 }

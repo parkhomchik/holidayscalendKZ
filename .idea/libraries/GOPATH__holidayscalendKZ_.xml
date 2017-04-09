@@ -1,0 +1,45 @@
+<component name="libraryTable">
+  <library name="GOPATH &lt;holidayscalendKZ&gt;">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../../../ExampleLogin" />
+      <root url="file://$PROJECT_DIR$/../../../../pkg" />
+      <root url="file://$PROJECT_DIR$/../../../../qsp" />
+      <root url="file://$PROJECT_DIR$/../../../gopkg.in" />
+      <root url="file://$PROJECT_DIR$/../../../holidayscalend" />
+      <root url="file://$PROJECT_DIR$/../../../cloud.google.com" />
+      <root url="file://$PROJECT_DIR$/../.." />
+      <root url="file://$PROJECT_DIR$/../../../golang.org" />
+      <root url="file://$PROJECT_DIR$/../../../hbwebapi" />
+      <root url="file://$PROJECT_DIR$/../../../lostfilm" />
+      <root url="file://$PROJECT_DIR$/../../../main" />
+      <root url="file://$PROJECT_DIR$/../../../sourcegraph.com" />
+      <root url="file://$PROJECT_DIR$/../../../seazonvar" />
+      <root url="file://$PROJECT_DIR$/../../../../c#" />
+      <root url="file://$PROJECT_DIR$/../../../oauth2Server" />
+      <root url="file://$PROJECT_DIR$/../../.." />
+      <root url="file://$PROJECT_DIR$/../../../../bin" />
+    </CLASSES>
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../../../ExampleLogin" />
+      <root url="file://$PROJECT_DIR$/../../../../pkg" />
+      <root url="file://$PROJECT_DIR$/../../../../qsp" />
+      <root url="file://$PROJECT_DIR$/../../../gopkg.in" />
+      <root url="file://$PROJECT_DIR$/../../../holidayscalend" />
+      <root url="file://$PROJECT_DIR$/../../../cloud.google.com" />
+      <root url="file://$PROJECT_DIR$/../.." />
+      <root url="file://$PROJECT_DIR$/../../../golang.org" />
+      <root url="file://$PROJECT_DIR$/../../../hbwebapi" />
+      <root url="file://$PROJECT_DIR$/../../../lostfilm" />
+      <root url="file://$PROJECT_DIR$/../../../main" />
+      <root url="file://$PROJECT_DIR$/../../../sourcegraph.com" />
+      <root url="file://$PROJECT_DIR$/../../../seazonvar" />
+      <root url="file://$PROJECT_DIR$/../../../../c#" />
+      <root url="file://$PROJECT_DIR$/../../../oauth2Server" />
+      <root url="file://$PROJECT_DIR$/../../.." />
+      <root url="file://$PROJECT_DIR$/../../../../bin" />
+    </SOURCES>
+    <excluded>
+      <root url="file://$PROJECT_DIR$" />
+    </excluded>
+  </library>
+</component>

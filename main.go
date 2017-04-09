@@ -30,6 +30,7 @@ func main() {
 	//db.AutoMigrate(&Holiday{})
 
 	r := gin.Default()
+	r.GET("/", GetHolidays)
 	r.GET("/holidays/", GetHolidays)
 	r.GET("/holidays/:date", GetHoliday)
 

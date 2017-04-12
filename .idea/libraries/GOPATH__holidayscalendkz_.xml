@@ -1,0 +1,45 @@
+<component name="libraryTable">
+  <library name="GOPATH &lt;holidayscalendkz&gt;">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../../../payments" />
+      <root url="file://$PROJECT_DIR$/../../../awesomeProject" />
+      <root url="file://$PROJECT_DIR$/../../../gopkg.in" />
+      <root url="file://$PROJECT_DIR$/../../../serials" />
+      <root url="file://$PROJECT_DIR$/../.." />
+      <root url="file://$PROJECT_DIR$/../../../golang.org" />
+      <root url="file://$PROJECT_DIR$/../../../sourcegraph.com" />
+      <root url="file://$PROJECT_DIR$/../../../go-oauth2-server-master" />
+      <root url="file://$PROJECT_DIR$/../../../starwars" />
+      <root url="file://$PROJECT_DIR$/../../../cxz" />
+      <root url="file://$PROJECT_DIR$/../../../src" />
+      <root url="file://$PROJECT_DIR$/../../../auth" />
+      <root url="file://$PROJECT_DIR$/../../../fbank" />
+      <root url="file://$PROJECT_DIR$/../../../pkg" />
+      <root url="file://$PROJECT_DIR$/../../../bin" />
+      <root url="file://$PROJECT_DIR$/../../../holidays" />
+      <root url="file://$PROJECT_DIR$/../../../testGORM" />
+    </CLASSES>
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../../../payments" />
+      <root url="file://$PROJECT_DIR$/../../../awesomeProject" />
+      <root url="file://$PROJECT_DIR$/../../../gopkg.in" />
+      <root url="file://$PROJECT_DIR$/../../../serials" />
+      <root url="file://$PROJECT_DIR$/../.." />
+      <root url="file://$PROJECT_DIR$/../../../golang.org" />
+      <root url="file://$PROJECT_DIR$/../../../sourcegraph.com" />
+      <root url="file://$PROJECT_DIR$/../../../go-oauth2-server-master" />
+      <root url="file://$PROJECT_DIR$/../../../starwars" />
+      <root url="file://$PROJECT_DIR$/../../../cxz" />
+      <root url="file://$PROJECT_DIR$/../../../src" />
+      <root url="file://$PROJECT_DIR$/../../../auth" />
+      <root url="file://$PROJECT_DIR$/../../../fbank" />
+      <root url="file://$PROJECT_DIR$/../../../pkg" />
+      <root url="file://$PROJECT_DIR$/../../../bin" />
+      <root url="file://$PROJECT_DIR$/../../../holidays" />
+      <root url="file://$PROJECT_DIR$/../../../testGORM" />
+    </SOURCES>
+    <excluded>
+      <root url="file://$PROJECT_DIR$" />
+    </excluded>
+  </library>
+</component>

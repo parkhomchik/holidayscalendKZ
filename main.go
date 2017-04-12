@@ -7,6 +7,8 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/sqlite"
+	"encoding/json"
+	"io/ioutil"
 )
 
 var db *gorm.DB
@@ -19,6 +21,8 @@ type Holiday struct {
 	Description string `json:"description"`
 }
 
+var holidays []Holiday
+
 func main() {
 	db, err = gorm.Open("sqlite3", "./holidays.db")
 
@@ -27,7 +31,14 @@ func main() {
 	}
 	defer db.Close()
 
-	//db.AutoMigrate(&Holiday{})
+	bytes, err := ioutil.ReadFile("holidays.json")
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	if json.Unmarshal(bytes, &holidays) != nil {
+		fmt.Println(err)
+	}
 
 	r := gin.Default()
 	r.GET("/", GetHolidays)
@@ -39,22 +50,16 @@ func main() {
 
 func GetHoliday(c *gin.Context) {
 	date := c.Params.ByName("date")
-	var holiday Holiday
-	if err := db.Where("date = ?", date).First(&holiday).Error; err != nil {
-		c.AbortWithStatus(404)
-		fmt.Println(err)
-	} else {
-		c.JSON(200, holiday)
+	t, _ := time.Parse("2006-01-02", date)
+	for _, h := range holidays {
+		if h.Date == t{
+			c.JSON(200, h)
+		}
 	}
+	c.AbortWithStatus(404)
+	fmt.Println(err)
 }
 
 func GetHolidays(c *gin.Context) {
-	var holiday []Holiday
-	if err := db.Find(&holiday).Error; err != nil {
-		c.AbortWithStatus(404)
-		fmt.Println(err)
-	} else {
-		c.JSON(200, holiday)
-	}
-
+	c.JSON(200, holidays)
 }

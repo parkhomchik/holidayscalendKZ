@@ -5,13 +5,10 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	"github.com/jinzhu/gorm"
-	_ "github.com/jinzhu/gorm/dialects/sqlite"
 	"encoding/json"
 	"io/ioutil"
 )
 
-var db *gorm.DB
 var err error
 
 //Holiday описываем структура праздника
@@ -24,13 +21,6 @@ type Holiday struct {
 var holidays []Holiday
 
 func main() {
-	db, err = gorm.Open("sqlite3", "./holidays.db")
-
-	if err != nil {
-		fmt.Println("DB ERROR", err)
-	}
-	defer db.Close()
-
 	bytes, err := ioutil.ReadFile("holidays.json")
 	if err != nil {
 		fmt.Println(err)
